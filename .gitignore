@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Model weights (large binaries)
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+models/
+
+# OmniParser (cloned dependency — install separately)
+OmniParser/
+
+# PoC files (development artifacts)
+*_poc.py
+*_test.py
+
+# Screenshots & images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+# Allow demo output images for README
+!demo_output/*.png
+
+# Allow homepage public assets
+!homepage/public/images/*.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*
+venv/
+.venv/
+
+# Cache
+.cache/
+
+# Serena IDE
+.serena/
+**/.serena/
+
+# Planning/architecture docs (dev only)
+PLAN*.md
+**/ARCHITECTURE.md
+
+# Image/demo generation scripts (dev only)
+gen_*.py
+demo_output/*
+!demo_output/tweakcn_before_after.png
+!demo_output/tweakcn_detection.png
+
+# npm lockfile (pnpm 사용)
+package-lock.json
+
+# Homepage (별도 배포)
+homepage/

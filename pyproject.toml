@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "eyes-cli"
+version = "0.1.0"
+description = "로컬 이미지 분석 도구 — Claude Code 스킬"
+requires-python = ">=3.10"
+dependencies = [
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+macos = ["pyobjc-framework-Vision>=10.0", "pyobjc-framework-Quartz>=10.0"]
+linux = ["pytesseract>=0.3.10"]
+windows = ["winocr>=0.1.0"]
+cv = ["opencv-python-headless>=4.8"]
+semantic = ["ultralytics>=8.3", "torch>=2.0"]
+full = ["ultralytics>=8.3", "torch>=2.0", "transformers==4.46.3", "accelerate"]
+vlm = []  # Ollama는 별도 설치
+
+[project.scripts]
+eyes = "eyes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
